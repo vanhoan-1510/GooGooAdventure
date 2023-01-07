@@ -13,6 +13,11 @@ TagManager:
   - BouncinessMap
   - LeftRotateGround
   - RightRotateGround
+  - CatFake
+  - LevelSelect
+  - Menu
+  - Trap
+  - RealCat
   layers:
   - Default
   - TransparentFX

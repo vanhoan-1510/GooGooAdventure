@@ -8,10 +8,13 @@ public class GroundBounciness : MonoBehaviour
 
     private Animator animator;
     private int count;
+    BoxCollider2D boxCollider;
+    SpriteRenderer spriteRenderer;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        boxCollider = GetComponent<BoxCollider2D>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -23,6 +26,7 @@ public class GroundBounciness : MonoBehaviour
     {
         animator.Play("GroundAnimation");
         yield return new WaitForSeconds(delay);
+        boxCollider.enabled= false;
     }
 
 }

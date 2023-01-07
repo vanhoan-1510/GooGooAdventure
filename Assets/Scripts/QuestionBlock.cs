@@ -26,7 +26,7 @@ public class QuestionBlock : MonoBehaviour
             {
                 Hit();
                 effector.enabled = false;
-            }
+            }   
         }
     }
 
@@ -45,6 +45,7 @@ public class QuestionBlock : MonoBehaviour
         {
             Instantiate(item, transform.position, Quaternion.identity);
         }
+        AudioManager.Instance.PlaySFX("Coin");
 
         StartCoroutine(Animate());
     }
